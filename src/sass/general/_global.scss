@@ -1,0 +1,128 @@
+html {
+
+    @media #{$sm-up} {
+        font: #{$font-global-sm} / #{$line-height-global-sm} 'Roboto', sans-serif;
+    }
+
+    @media #{$md-up} {
+        font: #{$font-global-md} / #{$line-height-global-md} 'Roboto', sans-serif;
+    }
+}
+
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+    line-height: 1.2;
+    margin: 0;
+
+    @media #{$sm-up} {
+        line-height: 1.1;
+    }
+}
+
+h6 {
+    font-size: $h6;
+
+    @media #{$sm-up} {
+        font-size: $h6-sm;
+    }
+
+    @media #{$md-up} {
+        font-size: $h6-md;
+    }
+}
+
+h5 {
+    font-size: $h5;
+
+    @media #{$sm-up} {
+        font-size: $h5-sm;
+    }
+
+    @media #{$md-up} {
+        font-size: $h5-md;
+    }
+}
+
+h4 {
+    font-size: $h4;
+
+    @media #{$sm-up} {
+        font-size: $h4-sm;
+    }
+
+    @media #{$md-up} {
+        font-size: $h4-md;
+    }
+}
+
+h3 {
+    font-size: $h3;
+
+    @media #{$sm-up} {
+        font-size: $h3-sm;
+    }
+
+    @media #{$md-up} {
+        font-size: $h3-md;
+    }
+}
+
+
+h2 {
+    font-size: $h2;
+
+    @media #{$sm-up} {
+        font-size: $h2-sm;
+    }
+
+    @media #{$md-up} {
+        font-size: $h2-md;
+    }
+}
+
+h1 {
+    font-size: $h1;
+
+    @media #{$sm-up} {
+        font-size: $h1-sm;
+    }
+
+    @media #{$md-up} {
+        font-size: $h1-md;
+    }
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+body {
+
+    #page {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+        #content {
+            flex: 1;
+
+            @include ie {
+                flex-basis: auto;
+            }
+
+            // @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            //
+            //     flex-basis: auto;
+            // }
+            //
+            // @supports (-ms-ime-align:auto) {
+            //
+            //     flex-basis: auto;
+            // }
+        }
+    }
+}

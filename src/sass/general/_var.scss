@@ -1,0 +1,80 @@
+$font-path: './fonts';
+
+// Website color variables
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+
+// General variables
+$text-color-global: $black;
+
+// Font sizes for mobile phones (up to $screen-sm)
+// $font-size-global is for all elements (except headers that are defined manually)
+$font-global: 12px;
+$line-height-global: 1.5 !default;
+$h6: 12px;
+$h5: 14px;
+$h4: 16px;
+$h3: 18px;
+$h2: 20px;
+$h1: 22px;
+
+// Font sizes for tablets (up from $screen-sm)
+$font-global-sm: 14px;
+$line-height-global-sm: 24px !default;
+$h6-sm: 14px;
+$h5-sm: 16px;
+$h4-sm: 18px;
+$h3-sm: 20px;
+$h2-sm: 22px;
+$h1-sm: 24px;
+
+//Font sizes for lap-tops (up from $screen-md)
+$font-global-md: 16px;
+$line-height-global-md: 26px !default;
+$h6-md: 16px;
+$h5-md: 18px;
+$h4-md: 20px;
+$h3-md: 22px;
+$h2-md: 26px;
+$h1-md: 30px;
+
+//Grid Variables
+$grid-columns:              24 !default; // Define number of columns here
+$grid-gutter-width:         60px !default; // This means that padding left and right on columns and wrapper will be $grid-gutter-width / 2
+
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$wrapper-sm:                 (720px + $grid-gutter-width) !default;
+
+$screen-md:                  1025px !default;
+$screen-md-min:              $screen-md !default;
+$wrapper-md:                 (940px + $grid-gutter-width) !default;
+
+$screen-lg:                  1366px !default;
+$screen-lg-min:              $screen-lg !default;
+$wrapper-lg:                 (1140px + $grid-gutter-width) !default;
+
+$laptop-height:				 650px; //This is due to lap tops having smaller viewport than in inspector, due to big bookmark bars or extensions
+
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+// Custom media grid vars
+$phone-up: 'only screen and (min-width: #{$screen-xs-min})';
+$landscape: 'only screen and (min-width: 560px) and (max-height: 414px) and (orientation: landscape)';
+$xs-only: 'only screen and (max-width: #{$screen-xs-max})';
+
+$sm-up: 'only screen and (min-width: #{$screen-sm-min})';
+$sm-only: 'only screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})';
+
+$md-up: 'only screen and (min-width: #{$screen-md-min})';
+$laptop: 'only screen and (min-width: #{$screen-md-min}) and (max-height: #{$laptop-height})';
+$md-only: 'only screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})';
+$md-down: 'only screen and (max-width: #{$screen-sm-max})';
+
+$lg-up: 'only screen and (min-width: #{$screen-lg-min})';
+$lg-down: 'only screen and (max-width: #{$screen-md-max})';

@@ -1,0 +1,60 @@
+@mixin absolute() {
+    position: absolute;
+    display: block;
+    content: '';
+}
+
+@mixin spacing($space) {
+    letter-spacing: ($space / 1000) * 1em;
+}
+
+@mixin font($font) {
+    font-family: '#{$font}', sans-serif;
+}
+
+@mixin trans-cubic() {
+    transition: .2s cubic-bezier(.6, 0, .3, 1);
+}
+
+@mixin trans() {
+    transition: .2s;
+}
+
+@mixin ph($color) {
+
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+
+	&:-moz-placeholder {
+		color: $color;
+		opacity: 1;
+	}
+
+	&::-moz-placeholder {
+		color: $color;
+		opacity: 1;
+	}
+
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+
+	&::-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+//Ie and edge only
+@mixin ie {
+
+ 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+        @content;
+    }
+
+    @supports (-ms-ime-align:auto) {
+
+        @content;
+    }
+}
