@@ -30,13 +30,32 @@ module.exports = function (grunt) {
             dist: {
                 src: 'src/style.css'
             }
+        },
+
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : [
+                        'src/style.css',
+                        'src/js/src/*.js',
+                        '**/*.php',
+                        '**/*.html'
+
+                    ]
+                },
+                options: {
+                    watchTask: true,
+                    proxy: "localhost"
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-browser-sync');
 
     grunt.registerTask('run', 'sass');
-    grunt.registerTask('default', 'watch');
+    grunt.registerTask('default', ['browserSync', 'watch']);
 };

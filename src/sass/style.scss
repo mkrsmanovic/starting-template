@@ -6,28 +6,3 @@
 
 @import 'pages';
 
-.wrapper-fluid {
-    margin-top: 50px;
-    border: 1px solid #ccc;
-
-    .wrap {
-
-        div {
-            @include xs(12);
-            @include sm(6);
-            margin-top: 20px;
-            margin-bottom: 20px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            border: 1px solid #000;
-
-            &.fifth {
-                background-color: green;
-            }
-
-            &.sixth {
-                background-color: mix($black, green, 20);
-            }
-        }
-    }
-}
